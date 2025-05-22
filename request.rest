@@ -1,0 +1,70 @@
+###
+GET http://localhost:5000/notes
+
+###
+GET http://localhost:5000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhIiwiaWF0IjoxNzQ3Nzk0MjI3LCJleHAiOjE3NDc3OTc4Mjd9.8iUTTJe1tpd_-EPaaTZfHtTZRA7Mw1JhH5zw7MCO0xs
+
+###
+GET http://localhost:5000/users
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "a",
+  "password": "1",
+  "confirm_password": "1"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "a",
+  "password": "1"
+}
+
+###
+POST http://localhost:5000/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhIiwiaWF0IjoxNzQ3Nzk0MjI3LCJleHAiOjE3NDc3OTc4Mjd9.8iUTTJe1tpd_-EPaaTZfHtTZRA7Mw1JhH5zw7MCO0xs
+
+{
+    "matakuliah": "Prak T1",
+    "judul": "export sql storage",
+    "isi": "post tanpa xampp dengan menggunakan ip cloud storage",
+    "deadline": "",
+    "userId": 1
+}
+
+###
+GET http://localhost:5000/token
+
+
+###
+POST https://notes-be-fadhil-21569344527.us-central1.run.app/notes
+Content-Type: application/json
+
+{
+    "matakuliah": "Prak TCC",
+    "judul": "export sql storage",
+    "isi": "post tanpa xampp dengan menggunakan ip cloud storage",
+    "deadline": ""
+}
+
+
+###
+PATCH  http://localhost:5000/notes/14
+Content-Type: application/json
+
+{
+    "matakuliah": "Prak TCC",
+    "judul": "edit sql storage",
+    "isi": "edit tanpa xampp dengan menggunakan ip cloud storage",
+    "deadline": ""
+}
+
+###
+DELETE http://localhost:5000/notes/14

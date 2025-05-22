@@ -1,0 +1,11 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY . .
+<<<<<<< HEAD
+RUN npm install --production
+EXPOSE 8080
+=======
+RUN npm install
+EXPOSE 5000
+>>>>>>> 25bda538749f540e11faf7651d4ad2c65463999d
+CMD ["node", "index.js"]
