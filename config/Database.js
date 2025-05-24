@@ -30,8 +30,7 @@ import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 import path from "path";
 
-<<<<<<< HEAD
-dotenv.config({ path: path.resolve(process.cwd(), "../.env") });  // naik satu folder
+dotenv.config({ path: path.resolve(process.cwd(), "./.env") });  // naik satu folder
 
 const {
   DB_HOST: host,
@@ -52,11 +51,4 @@ const db = new Sequelize(database, username, password, {
 });
 
 export default db;
-=======
-const db = new Sequelize('RECOVER_YOUR_DATA','root', '',{
-
-    host: '35.202.137.184',
-    dialect: 'mysql'
-} );
->>>>>>> 25bda538749f540e11faf7651d4ad2c65463999d
 

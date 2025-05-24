@@ -45,7 +45,6 @@ import cookieParser from "cookie-parser";
 // app.use(express.json());
 // app.use(NoteRoute);
 const app = express();
-<<<<<<< HEAD
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
@@ -64,14 +63,6 @@ app.use(cors({
 
 app.use(express.json());
 app.use(cookieParser());
-=======
-app.set("view engine", "ejs");
-
-app.use(cors());
-app.use(express.json());
-app.get("/", (req, res) => res.render("index"));
-app.use(NoteRoute);
->>>>>>> 25bda538749f540e11faf7651d4ad2c65463999d
 
 app.use(route); // pasang semua route
 
