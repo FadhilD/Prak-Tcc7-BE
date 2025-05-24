@@ -1,22 +1,22 @@
 steps:
-  # Membuat image dengan perintah "cloud build -t gcr.io/$PROJECT_ID/notes-be-fadhil ."
+  # Membuat image dengan perintah "cloud build -t gcr.io/$PROJECT_ID/notes-be-fadhil7 ."
   # Project ID akan secara otomatis terisi ketika melakukan deploy di project yg dipilih
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/notes-be-fadhil", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/notes-be-fadhil7", "."]
 
   # Meng-upload/push image yg telah dibuat ke Artifact Registry
-  # Pada bagian ini, dijalankan perintah "docker push 'gcr.io/$PROJECT_ID/notes-be-fadhil'"
+  # Pada bagian ini, dijalankan perintah "docker push 'gcr.io/$PROJECT_ID/notes-be-fadhil7'"
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/notes-be-fadhil"]
+    args: ["push", "gcr.io/$PROJECT_ID/notes-be-fadhil7"]
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
       [
         "run",
         "deploy",
-        "notes-be-fadhil",
+        "notes-be-fadhil7",
         "--image",
-        "gcr.io/$PROJECT_ID/notes-be-fadhil",
+        "gcr.io/$PROJECT_ID/notes-be-fadhil7",
         "--timeout",
         "1000s",
         "--port",
