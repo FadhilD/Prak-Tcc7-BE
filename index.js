@@ -56,7 +56,10 @@ const corsOptions = {
 
 // app.use(cors(corsOptions));
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: [
+    "https://notes-fe-fadhil-dot-f-05-450706.uc.r.appspot.com",
+    "http://localhost:3000", // Tambahkan localhost untuk pengembangan lokal
+  ],
   credentials: true // ⬅️ WAJIB supaya cookie diterima/dibaca
 }));
 // app.options("*", cors(corsOptions));
